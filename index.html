@@ -14,8 +14,8 @@ function calculate() {
 	f.oninput = f.onchange = function () {
 		switch (sign.value) {
 			case '+': out.value = a1.valueAsNumber + a2.valueAsNumber; break;
-			case '*': out.value = a1.valueAsNumber * a2.valueAsNumber; break;
 			case '-': out.value = a1.valueAsNumber - a2.valueAsNumber; break;
+			case '*': out.value = a1.valueAsNumber * a2.valueAsNumber; break;
 			case '/': out.value = a1.valueAsNumber / a2.valueAsNumber; break;
 			default: out.value = 'ERROR';
 		}
@@ -31,8 +31,8 @@ function calculate() {
 		<input onchange="calculate()" name="a1" type="number" step="any" value="1">
 		<select onchange="calculate()" name="sign">
 			<option value="+" selected="selected">+</option>
-			<option value="*">*</option>
 			<option value="-">-</option>
+			<option value="*">*</option>
 			<option value="/">/</option>
 		</select>
 		<input onchange="calculate()" name="a2" type="number" step="any" value="1">
