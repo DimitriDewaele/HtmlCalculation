@@ -18,6 +18,7 @@ function calculate() {
 			case '*': out.value = a1.valueAsNumber * a2.valueAsNumber; break;
 			case '/': out.value = a1.valueAsNumber / a2.valueAsNumber; break;
 			case '^': out.value = Math.pow(a1.valueAsNumber,a2.valueAsNumber); break;
+			case '0': out.value = 0; break;
 			default: out.value = 'ERROR';
 		}
 	};
@@ -36,6 +37,7 @@ function calculate() {
 			<option value="*">*</option>
 			<option value="/">/</option>
 			<option value="^">^</option>
+			<option value="0">0</option>
 		</select>
 		<input onchange="calculate()" name="a2" type="number" step="any" value="1">
 		<output name="out"/>
@@ -45,6 +47,7 @@ function calculate() {
 <ul>
     <li>release/4.0.0.0
 		<ul>
+			<li>feature/7 zero</li>
 			<li>feature/6 power</li>
 			<li>feature/5 divide</li>
 		</ul>
