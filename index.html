@@ -1,10 +1,53 @@
 <html>
 <head>
+<script>
+function calculate() {
+	var f = document.getElementById('form'),
+		e = f.elements,
+		a1 = e['a1'],
+		a2 = e['a2'],
+		a3 = e['a3'],
+		a4 = e['a4'],
+		a5 = e['a5'],
+		sign = e['sign'],
+		out = e['out'];
+	f.onsubmit = function () {
+		return false;
+	};
+	f.oninput = f.onchange = function () {
+		switch (sign.value) {
+			case '+': out.value = a1.valueAsNumber + a2.valueAsNumber + a3.valueAsNumber + a4.valueAsNumber + a5.valueAsNumber; break;
+			default: out.value = 'ERROR';
+		}
+	};
+}
+</script>
 </head>
 <body>
-<h1>GitHub test for calcuations!</h1>
+<h1>GitHub test for calculations!</h1>
+<h2>Input numbers for calculation</h2>
+<form id="form">
+	<p>
+	  <p><input onchange="calculate()" name="a1" type="number" step="any" value="1"></p>
+	  <p><input onchange="calculate()" name="a2" type="number" step="any" value="1"></p>
+	  <p><input onchange="calculate()" name="a3" type="number" step="any" value="1"></p>
+	  <p><input onchange="calculate()" name="a4" type="number" step="any" value="1"></p>
+	  <p><input onchange="calculate()" name="a5" type="number" step="any" value="1"></p>
+	  <p>
+		  <select onchange="calculate()" name="sign">
+			  <option value="+" selected="selected">+</option>
+		  </select>
+	  </p>
+	  <p>Total = <output name="out"></output></p>
+	</p>
+</form>
 <h2>Changelog</h2>
 <ul>
+    <li>release/2.0.0.0
+		<ul>
+			<li>feature/2 calculate sum</li>
+		</ul>
+	</li>
     <li>release/1.0.0.0
 		<ul>
 			<li>feature/1 Initial page</li>
