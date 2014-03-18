@@ -27,16 +27,14 @@ function calculate() {
 <h2>Input numbers for calculation</h2>
 <form id="form">
 	<p>
-	  <p><input onchange="calculate()" name="a1" type="number" step="any" value="1"></p>
-	  <p><input onchange="calculate()" name="a2" type="number" step="any" value="1"></p>
-	  <p>
-		  <select onchange="calculate()" name="sign">
-			  <option value="+" selected="selected">+</option>
-			  <option value="*">*</option>
-			  <option value="-">-</option>
-		  </select>
-	  </p>
-	  <p>Total = <output name="out"></output></p>
+		<input onchange="calculate()" name="a1" type="number" step="any" value="1">
+		<select onchange="calculate()" name="sign">
+			<option value="+" selected="selected">+</option>
+			<option value="*">*</option>
+			<option value="-">-</option>
+		</select>
+		<input onchange="calculate()" name="a2" type="number" step="any" value="1">
+		<output name="out"/>
 	</p>
 </form>
 <h2>Changelog</h2>
