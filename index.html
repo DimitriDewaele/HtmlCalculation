@@ -17,6 +17,8 @@ function calculate() {
 	f.oninput = f.onchange = function () {
 		switch (sign.value) {
 			case '+': out.value = a1.valueAsNumber + a2.valueAsNumber + a3.valueAsNumber + a4.valueAsNumber + a5.valueAsNumber; break;
+			case '*': out.value = a1.valueAsNumber * a2.valueAsNumber * a3.valueAsNumber * a4.valueAsNumber * a5.valueAsNumber; break;
+			case '-': out.value = a1.valueAsNumber - a2.valueAsNumber - a3.valueAsNumber - a4.valueAsNumber - a5.valueAsNumber; break;
 			default: out.value = 'ERROR';
 		}
 	};
@@ -36,6 +38,8 @@ function calculate() {
 	  <p>
 		  <select onchange="calculate()" name="sign">
 			  <option value="+" selected="selected">+</option>
+			  <option value="*">*</option>
+			  <option value="-">-</option>
 		  </select>
 	  </p>
 	  <p>Total = <output name="out"></output></p>
@@ -43,6 +47,12 @@ function calculate() {
 </form>
 <h2>Changelog</h2>
 <ul>
+    <li>release/3.0.0.0
+		<ul>
+			<li>feature/4 minus</li>
+			<li>feature/3 product</li>
+		</ul>
+	</li>
     <li>release/2.0.0.0
 		<ul>
 			<li>feature/2 calculate sum</li>
