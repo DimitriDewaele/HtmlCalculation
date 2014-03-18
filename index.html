@@ -6,9 +6,6 @@ function calculate() {
 		e = f.elements,
 		a1 = e['a1'],
 		a2 = e['a2'],
-		a3 = e['a3'],
-		a4 = e['a4'],
-		a5 = e['a5'],
 		sign = e['sign'],
 		out = e['out'];
 	f.onsubmit = function () {
@@ -16,9 +13,9 @@ function calculate() {
 	};
 	f.oninput = f.onchange = function () {
 		switch (sign.value) {
-			case '+': out.value = a1.valueAsNumber + a2.valueAsNumber + a3.valueAsNumber + a4.valueAsNumber + a5.valueAsNumber; break;
-			case '*': out.value = a1.valueAsNumber * a2.valueAsNumber * a3.valueAsNumber * a4.valueAsNumber * a5.valueAsNumber; break;
-			case '-': out.value = a1.valueAsNumber - a2.valueAsNumber - a3.valueAsNumber - a4.valueAsNumber - a5.valueAsNumber; break;
+			case '+': out.value = a1.valueAsNumber + a2.valueAsNumber; break;
+			case '*': out.value = a1.valueAsNumber * a2.valueAsNumber; break;
+			case '-': out.value = a1.valueAsNumber - a2.valueAsNumber; break;
 			default: out.value = 'ERROR';
 		}
 	};
@@ -32,9 +29,6 @@ function calculate() {
 	<p>
 	  <p><input onchange="calculate()" name="a1" type="number" step="any" value="1"></p>
 	  <p><input onchange="calculate()" name="a2" type="number" step="any" value="1"></p>
-	  <p><input onchange="calculate()" name="a3" type="number" step="any" value="1"></p>
-	  <p><input onchange="calculate()" name="a4" type="number" step="any" value="1"></p>
-	  <p><input onchange="calculate()" name="a5" type="number" step="any" value="1"></p>
 	  <p>
 		  <select onchange="calculate()" name="sign">
 			  <option value="+" selected="selected">+</option>
