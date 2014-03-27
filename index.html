@@ -1,73 +1,91 @@
 <html>
-<head>
-<script>
-function calculate() {
-	var f = document.getElementById('form'),
-		e = f.elements,
-		a1 = e['a1'],
-		a2 = e['a2'],
-		sign = e['sign'],
-		out = e['out'];
-	f.onsubmit = function () {
-		return false;
-	};
-	f.oninput = f.onchange = function () {
-		switch (sign.value) {
-			case '+': out.value = a1.valueAsNumber + a2.valueAsNumber; break;
-			case '-': out.value = a1.valueAsNumber - a2.valueAsNumber; break;
-			case '*': out.value = a1.valueAsNumber * a2.valueAsNumber; break;
-			case '/': out.value = a1.valueAsNumber / a2.valueAsNumber; break;
-			case '^': out.value = Math.pow(a1.valueAsNumber,a2.valueAsNumber); break;
-			case '0': out.value = 0; break;
-			default: out.value = 'ERROR';
-		}
-	};
-}
-</script>
-</head>
-<body>
-<h1>GitHub test for calculations!</h1>
-<h2>Input numbers for calculation</h2>
-<form id="form">
-	<p>
-		<input onchange="calculate()" name="a1" type="number" step="any" value="1">
-		<select onchange="calculate()" name="sign">
-			<option value="+" selected="selected">+</option>
-			<option value="-">-</option>
-			<option value="*">*</option>
-			<option value="/">/</option>
-			<option value="^">^</option>
-			<option value="0">0</option>
-		</select>
-		<input onchange="calculate()" name="a2" type="number" step="any" value="1">
-		<output name="out"/>
-	</p>
-</form>
-<h2>Changelog</h2>
-<ul>
-    <li>release/4.0.0.0
-		<ul>
-			<li>feature/7 zero</li>
-			<li>feature/6 power</li>
-			<li>feature/5 divide</li>
-		</ul>
-	</li>
-    <li>release/3.0.0.0
-		<ul>
-			<li>feature/4 minus</li>
-			<li>feature/3 product</li>
-		</ul>
-	</li>
-    <li>release/2.0.0.0
-		<ul>
-			<li>feature/2 calculate sum</li>
-		</ul>
-	</li>
-    <li>release/1.0.0.0
-		<ul>
-			<li>feature/1 Initial page</li>
-		</ul>
-	</li>
-</ul>
-</body>
+    <head>
+        <script>
+            function calculate() {
+                var f = document.getElementById('form'),
+                        e = f.elements,
+                        a1 = e['a1'],
+                        a2 = e['a2'],
+                        sign = e['sign'],
+                        out = e['out'];
+                f.onsubmit = function() {
+                    return false;
+                };
+                f.oninput = f.onchange = function() {
+                    switch (sign.value) {
+                        case '+':
+                            out.value = a1.valueAsNumber + a2.valueAsNumber;
+                            break;
+                        case '-':
+                            out.value = a1.valueAsNumber - a2.valueAsNumber;
+                            break;
+                        case '*':
+                            out.value = a1.valueAsNumber * a2.valueAsNumber;
+                            break;
+                        case '/':
+                            out.value = a1.valueAsNumber / a2.valueAsNumber;
+                            break;
+                        case '^':
+                            out.value = Math.pow(a1.valueAsNumber, a2.valueAsNumber);
+                            break;
+                        case '0':
+                            out.value = 0;
+                            break;
+                        default:
+                            out.value = 'ERROR';
+                    }
+                };
+            }
+        </script>
+    </head>
+    <body>
+        <h1>GitHub test for calculations!</h1>
+        <h2>Input numbers for calculation</h2>
+        <form id="form">
+            <p>
+                <input onchange="calculate()" name="a1" type="number" step="any" value="1">
+                <select onchange="calculate()" name="sign">
+                    <option value="+" selected="selected">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="^">^</option>
+                    <option value="0">0</option>
+                </select>
+                <input onchange="calculate()" name="a2" type="number" step="any" value="1">
+                <output name="out"/>
+            </p>
+        </form>
+        <h2>Changelog</h2>
+        <ul>
+            <li>release/5.0.0.0
+                <ul>
+                    <li>feature/8 round</li>
+                </ul>
+            </li>
+            <li>release/4.0.0.0
+                <ul>
+                    <li>feature/7 zero</li>
+                    <li>feature/6 power</li>
+                    <li>feature/5 divide</li>
+                </ul>
+            </li>
+            <li>release/3.0.0.0
+                <ul>
+                    <li>feature/4 minus</li>
+                    <li>feature/3 product</li>
+                </ul>
+            </li>
+            <li>release/2.0.0.0
+                <ul>
+                    <li>feature/2 calculate sum</li>
+                </ul>
+            </li>
+            <li>release/1.0.0.0
+                <ul>
+                    <li>feature/1 Initial page</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
 </html>
