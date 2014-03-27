@@ -31,6 +31,9 @@
                         case '0':
                             out.value = 0;
                             break;
+                        case 'round':
+                            out.value = Math.round(a1.valueAsNumber);
+                            break;
                         default:
                             out.value = 'ERROR';
                     }
@@ -51,6 +54,7 @@
                     <option value="/">/</option>
                     <option value="^">^</option>
                     <option value="0">0</option>
+                    <option value="round">round</option>
                 </select>
                 <input onchange="calculate()" name="a2" type="number" step="any" value="1">
                 <output name="out"/>
